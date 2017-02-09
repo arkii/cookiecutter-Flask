@@ -1,14 +1,14 @@
-{% extends "bootstrap/layout.html" %}
+{{ "{%" }} extends "bootstrap/layout.html" {{ "%}" }}
 
-{% block title %}{{cookiecutter.repo_name}}{% endblock %}
+{{ "{%" }} block title {{ "%}" }}{{cookiecutter.repo_name}}{{ "{%" }} endblock {{ "%}" }}
 
-{% block head %}
+{{ "{%" }} block head {{ "%}" }}
 {{ super() }}
 <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
 <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-{% endblock %}
+{{ "{%" }} endblock {{ "%}" }}
 
-{% block navbar %}
+{{ "{%" }} block navbar {{ "%}" }}
 <div class="navbar navbar-inverse" role="navigation">
     <div class="container">
         <div class="navbar-header">
@@ -27,22 +27,22 @@
         </div>
     </div>
 </div>
-{% endblock %}
+{{ "{%" }} endblock {{ "%}" }}
 
-{% block content %}
+{{ "{%" }} block content {{ "%}" }}
 <div class="container">
-    {% for message in get_flashed_messages() %}
+    {{ "{%" }} for message in get_flashed_messages() {{ "%}" }}
     <div class="alert alert-warning">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{ message }}
     </div>
-    {% endfor %}
+    {{ "{%" }} endfor {{ "%}" }}
 
-    {% block page_content %}{% endblock %}
+    {{ "{%" }} block page_content {{ "%}" }}{{ "{%" }} endblock {{ "%}" }}
 </div>
-{% endblock %}
+{{ "{%" }} endblock {{ "%}" }}
 
-{% block scripts %}
+{{ "{%" }} block scripts {{ "%}" }}
 {{ super() }}
 {{ moment.include_moment() }}
-{% endblock %}
+{{ "{%" }} endblock {{ "%}" }}
