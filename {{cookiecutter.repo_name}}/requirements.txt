@@ -6,3 +6,4 @@ Flask-SQLAlchemy
 Flask-Bootstrap
 Flask-Moment
 Flask-WTF
+gunicorn
